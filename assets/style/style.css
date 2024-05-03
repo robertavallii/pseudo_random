@@ -1,0 +1,211 @@
+body {
+  list-style: none;
+  font-family: 'AkzidenzGrotesk', sans-serif;
+}  
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+li{
+font-size: 18px;
+
+}
+.wrapper {
+  max-width: 90vw;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 160px;
+  font-size: 75px;
+  color: #0029FF;
+  font-weight: 800;
+  grid-column-start: 1; /* Inizia dalla prima colonna */
+  grid-column-end: 7; /* Termina alla settima colonna */
+}
+
+hr {
+  stroke-width: 1px;
+stroke: rgba(148, 148, 148, 0.60);
+}
+
+h2 {
+  font-size: 50px; 
+  color: rgba(0, 0, 0, 0.3); 
+  grid-column-start: 1; 
+  grid-column-end: 7; 
+}
+
+h3{
+font-size: 30px;
+
+}
+
+p{
+  line-height: 25px; /* 125% */
+  font-size: 20px;
+}
+
+.container {
+  background-color: var(--nav-color);
+  font-size: 1.2rem;
+  height: 80px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  margin: auto;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.container .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.container .navbar ul li {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: var(--nav-text);
+  font-weight: lighter;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.container-main {
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 60px;
+  display: grid;
+}
+
+
+.h3 {
+  font-weight: 600;
+  font-size: 35px;
+  grid-column: 1 / span 6;
+}
+
+.immagine01{
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+
+.testo01{
+grid-column-start: 1; /* Inizia dalla prima colonna */
+grid-column-end: 4; /* Termina alla terza colonna */
+
+}
+
+.titolo01{
+  grid-column-start: 1; /* Inizia dalla prima colonna */
+  grid-column-end: 4; /* Termina alla terza colonna */
+
+}
+
+
+.secondoparagrafo{
+  margin-top: 100px;
+}
+.testo02{
+  grid-column-start: 4; /* Inizia dalla prima colonna */
+  grid-column-end: 7; /* Termina alla terza colonna */
+
+  }
+  .titolo02{
+    grid-column-start: 4; /* Inizia dalla prima colonna */
+    grid-column-end: 7; /* Termina alla terza colonna */
+
+  }
+ 
+
+  .gruppo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .gruppo2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .gruppo3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+.rettangolo, .rettangolo2, .rettangolo3 {
+  margin-top: 140px;
+    margin-bottom: 20px;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.rettangolo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.rettangolo2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.rettangolo3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.rettangolo p, .rettangolo2 p, .rettangolo3 p { /* testo all'interno del quadrato */
+    color: rgb(0, 0, 0);
+    font-weight: regular;
+}
+
+.didascalia span,
+.didascalia2 span,
+.didascalia3 span {
+  color: rgb(0, 0, 0); /* Colore del testo */
+  margin-top: 10px; /* Margine superiore */
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  display: block; /* Imposta il display come blocco */
+}
+
+/*MEDIA QUERES NAVBAR*/
+@media screen and (max-width: 767px) {
+  .container-main {
+    grid-template-columns: 1fr; /* Modifica la griglia a una singola colonna */
+  }
+
+  /* Aggiusta il posizionamento dei titoli e dei paragrafi all'interno della griglia */
+  .h3, .titolo01, .testo01, .titolo02, .testo02 {
+    grid-column: 1 / -1; /* Estende i titoli e i paragrafi su tutte le colonne disponibili */
+  }
+
+  /* Aggiusta il posizionamento dei rettangoli e delle didascalie */
+  .rettangolo, .rettangolo2, .rettangolo3,
+  .didascalia, .didascalia2, .didascalia3 {
+    grid-column-start: 1; /* Inizia dalla prima colonna */
+    grid-column-end: -1; /* Termina all'ultima colonna disponibile */
+  }
+}
