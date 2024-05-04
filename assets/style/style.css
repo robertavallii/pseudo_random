@@ -21,12 +21,17 @@ font-size: 18px;
 }
 
 h1 {
-  margin-top: 160px;
+  margin-top: 100px;
   font-size: 75px;
   color: #0029FF;
   font-weight: 800;
   grid-column-start: 1; /* Inizia dalla prima colonna */
   grid-column-end: 7; /* Termina alla settima colonna */
+}
+
+.titolo_header
+{
+  margin-top: 160px;
 }
 
 hr {
@@ -48,7 +53,9 @@ font-size: 30px;
 
 p{
   line-height: 25px; /* 125% */
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0px;
 }
 
 .container {
@@ -118,23 +125,24 @@ grid-column-end: 4; /* Termina alla terza colonna */
 
 }
 
-.titolo01{
+.titolo01, .titolo03{
   grid-column-start: 1; /* Inizia dalla prima colonna */
-  grid-column-end: 4; /* Termina alla terza colonna */
+  grid-column-end: 7; /* Termina alla terza colonna */
+  margin-top: 100px; /* Riduci il margine superiore */
+
 
 }
-
 
 .secondoparagrafo{
   margin-top: 100px;
 }
 .testo02{
-  grid-column-start: 4; /* Inizia dalla prima colonna */
-  grid-column-end: 7; /* Termina alla terza colonna */
+  grid-column-start: 1; /* Inizia dalla prima colonna */
+  grid-column-end: 4; /* Termina alla terza colonna */
 
   }
   .titolo02{
-    grid-column-start: 4; /* Inizia dalla prima colonna */
+    grid-column-start: 1; /* Inizia dalla prima colonna */
     grid-column-end: 7; /* Termina alla terza colonna */
 
   }
@@ -185,10 +193,12 @@ grid-column-end: 4; /* Termina alla terza colonna */
 .didascalia3 span {
   color: rgb(0, 0, 0); /* Colore del testo */
   margin-top: 10px; /* Margine superiore */
+  margin-bottom: 100px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   display: block; /* Imposta il display come blocco */
+
 }
 
 .hr_filetto {
@@ -197,6 +207,56 @@ grid-column-end: 4; /* Termina alla terza colonna */
   margin: 20px 0; /* Margine sopra e sotto */
   margin-top: 200px;
 }
+.dimostrazione_1a {
+  width: 650px;
+  height: 650px;
+  background-color: #0029FF;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.dimostrazione_1b {
+  width: 650px;
+  height: 650px;
+  background-color: #0029FF;
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+.cenni_storici_msm{
+margin-bottom: 100px;
+}
+
+.immagine_von{
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+.immagine_msm{
+  grid-column-start: 4;
+  grid-column-end: 7;
+
+}
+
+.testo_limiti{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.limiti_msm{
+  margin-top: 100px;
+}
+.funzionamento_msm{
+  margin-top: 0px;
+}
+
+.titolo_funzionamento_msm{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.testo_funzionamento_msm{
+  grid-column-start: 1;
+  grid-column-end: 4; 
+}
+
 
 /*MEDIA QUERES NAVBAR*/
 @media screen and (max-width: 767px) {
@@ -205,7 +265,7 @@ grid-column-end: 4; /* Termina alla terza colonna */
   }
 
   /* Aggiusta il posizionamento dei titoli e dei paragrafi all'interno della griglia */
-  .h3, .titolo01, .testo01, .titolo02, .testo02 {
+  .h3, .titolo01, .testo_requisiti, .titolo02, .testo02, .testo_funzionamento_msm{
     grid-column: 1 / -1; /* Estende i titoli e i paragrafi su tutte le colonne disponibili */
   }
 

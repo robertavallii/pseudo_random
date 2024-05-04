@@ -38,13 +38,13 @@
 
         <hr>
    
-        <h1 class="mt-2">Algoritmi Pseudo Random</h1> 
+        <h1 class="titolo_header">Algoritmi Pseudo Random</h1> 
         <h2>Un sistema di numeri pseudo-casuali è un metodo per generare una sequenza di numeri che appaiono casuali, ma che sono in realtà determinati da un algoritmo predefinito.
         </h2> 
         <h3></h3>
         <img src="/assets/image/schema01.svg" alt="immagine schema 01" style="width: 100%; height: auto;" class="immagine01">
 
-        <div class="primoparagrafo">
+        <div class="requisiti">
             <div class="container-main">  
             <h3 class="titolo01">Requisiti di una sequenza casuale</h3>
         <p class= "testo01">Una sequenza è considerata casuale se rispetta due requisiti essenziali: distribuzione uniforme e indipendenza. La distribuzione uniforme implica che i numeri all'interno di un intervallo siano equamente distribuiti, mentre l'indipendenza richiede che ciascun numero non sia influenzato dai precedenti. Inoltre, è importante che il periodo della sequenza sia ampio, in modo da evitare che i numeri casuali in una simulazione si ripetano ciclicamente.</p>
@@ -78,6 +78,7 @@
             <span>Esempio di sequenza errata, soddisfa solo il criterio di equidistanza</span>
         </div>
     </div>
+    
 
     <!-- Gruppo 3 -->
     <div class="gruppo3">
@@ -93,15 +94,62 @@
 </div>
 
 
+
+<div class="dimostrazione1">
+    <div class="container-main">  
+    <h3 class="titolo03">Dimostrazione differenza tra realtà e casualità</h3>
+    <iframe class="dimostrazione_1a" src=""></iframe>
+    <iframe class="dimostrazione_1b" src=""></iframe>
+
+</div>  <!-- chiusura secondo paragrafo-->
+</div> <!-- chiusura main cont-->
+
+
+
 <!-- secondo paragrafo-->
- <div class="secondoparagrafo">
+<div class="secondoparagrafo">
     <div class="container-main">  
     <h3 class="titolo02">Ambiti di utilizzo</h3>
 <p class= "testo02">I numeri casuali e pseudo-casuali, sono ampiamente utilizzati in vari ambiti, quali la simulazione di fenomeni naturali, l'analisi numerica, la programmazione informatica, i videogiochi, il creative coding e la crittografia. Questo approccio trova applicazioni in molteplici settori della scienza e della tecnologia. Tra questi vi sono la crittografia (per la generazione di chiavi e password), la simulazione tramite computers, il metodo MonteCarlo per il calcolo numerico (utile, ad esempio, nel calcolo di integrali complessi non trattabili con metodi classici), i giochi d’azzardo online (come dadi, carte, roulette e casinò online), gli algoritmi probabilistici (come l’algoritmo di Miller-Rabin per la verifica della primalità di un numero) e la programmazione dei videogiochi. </p>
 </div>  <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
 
+
 <hr class="hr_filetto">
+
+<h1 class="titolo_sezioni">Middle-square method</h1> 
+
+       <div class="cenni_storici_msm">
+            <div class="container-main">  
+            <h3 class="titolo01">Cenni storici</h3>
+        <p class= "testo01">I primi passi nella generazione di numeri pseudo-casuali risalgono al  XVII secolo con Blaise Pascal e Pierre de Fermat, che esplorarono l'idea  tramite esperimenti di gioco d'azzardo. L'elaborazione degli algoritmi  avvenne solo nel XX secolo. La necessità di numeri casuali è antica, con  metodi empirici come il lancio dei dadi. Con l'avanzare della  tecnologia, la generazione sistematica di numeri casuali divenne  essenziale. Nei computer deterministici, ottenere casualità è  impossibile, ma si è proposto l'uso di fenomeni non deterministici, come  i rumori del suono a bassa frequenza.
+            Un momento significativo nella storia della generazione di numeri pseudo-casuali è rappresentato dalla collaborazione di John von Neumann alla costruzione della bomba all'idrogeno nel 1949. Von Neumann calcolò approssimazioni ai processi della fissione nucleare, che richiedevano l'accesso a numeri casuali riproducibili per risultati coerenti e ripetibili. Per soddisfare questa esigenza, von Neumann sviluppò il Middle Square Method, uno dei primi algoritmi documentati per la generazione di numeri pseudo-casuali.</p>
+            <img src="/assets/image/von_neumann.jpg" alt="immagine schema 01" style="width: 100%; height: auto;" class="immagine_von">
+        </div>  <!-- chiusura primo paragrafo-->
+ </div> <!-- chiusura main cont-->
+
+
+
+ <div class="funzionamento_msm">
+    <div class="container-main"> 
+    <h3 class="titolo_funzionamento_msm">Funzionamento</h3>
+<p class= "testo_funzionamento_msm">Questo algoritmo, come tutti i PRNG, utilizza un seme di partenza che può essere definito da fattori casuali come il rumore o il tempo espresso in millisecondi. Da questo seme si genera una sequenza di numeri pseudo-casuali.         Il procedimento inizia con l'elevazione al quadrato del seme iniziale. Ad esempio, se il seme è 42, lo eleviamo al quadrato ottenendo 1764. Le cifre centrali di questo risultato diventano il nuovo seme per il passaggio successivo. Questo processo viene iterato per generare la sequenza.         Il periodo della sequenza, ovvero il numero di numeri generati prima che la sequenza si ripeta, dipende dal numero di cifre del seme. Più cifre ha il seme, maggiore è la sicurezza e la complessità della sequenza generata.</p>
+    <img src="/assets/image/funzionamento_msm.svg" alt="immagine schema 01" style="width: 108%; height: auto;" class="immagine_msm">
+</div>  <!-- chiusura primo paragrafo-->
+</div> <!-- chiusura main cont-->
+
+
+
+<div class="limiti_msm">
+    <div class="container-main">  
+    <h3 class="titolo01">Limiti dell'MSM</h3>
+<p class= "testo_limiti">Il Middle Square Method presenta limiti significativi che ne minano l'efficacia e l'affidabilità. La sua tendenza a generare cicli di ripetizione brevi compromette la casualità dei numeri prodotti, rendendolo inadatto per applicazioni che richiedono alta casualità e bassa correlazione tra i numeri. È sensibile alla scelta del seme iniziale e può generare risultati imprevedibili se il seme non è selezionato correttamente.         Inoltre, può produrre sequenze con una distribuzione non uniforme, sovrarappresentando alcuni numeri rispetto ad altri. Questi limiti lo rendono meno adatto per applicazioni che richiedono una generazione casuale di alta qualità, spingendo verso l'adozione di algoritmi più sofisticati.</p>
+</div>  <!-- chiusura secondo paragrafo-->
+</div> <!-- chiusura main cont-->
+
+<hr class="hr_filetto">
+
+<h1 class="titolo_sezioni">Linear Congruential Generator</h1> 
 
 
 
