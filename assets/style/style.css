@@ -191,6 +191,13 @@ grid-column-end: 4; /* Termina alla terza colonna */
   display: block; /* Imposta il display come blocco */
 }
 
+.hr_filetto {
+  border: none;
+  border-top: 1px solid rgba(148, 148, 148, 0.60); /* Stile della linea orizzontale */
+  margin: 20px 0; /* Margine sopra e sotto */
+  margin-top: 200px;
+}
+
 /*MEDIA QUERES NAVBAR*/
 @media screen and (max-width: 767px) {
   .container-main {
