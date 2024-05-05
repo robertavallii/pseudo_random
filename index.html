@@ -28,17 +28,16 @@
                   <li>Index</li>
                     <nav>
                       <ul>
-                        <li><a href="#">Pseudo Random</a></li>
-                        <li><a href="#">Middle Square</a></li>
-                        <li><a href="#">Linear congruential generator</a></li>
+                        <li><a href="#pseudo_random">Pseudo Random</a></li>
+                        <li><a href="#middle_square_method">Middle Square Method</a></li>
+                        <li><a href="#linear_congruential">Linear congruential generator</a></li>
                       </ul>
                     </nav>
                 </div>
               </div> 
 
         <hr>
-   
-        <h1 class="titolo_header">Algoritmi Pseudo Random</h1> 
+        <h1 id="pseudo_random" class="titolo_header">Algoritmi Pseudo Random</h1>
         <h2>Un sistema di numeri pseudo-casuali è un metodo per generare una sequenza di numeri che appaiono casuali, ma che sono in realtà determinati da un algoritmo predefinito.
         </h2> 
         <h3></h3>
@@ -98,11 +97,11 @@
 <div class="dimostrazione1">
     <div class="container-main">  
     <h3 class="titolo03">Dimostrazione differenza tra realtà e casualità</h3>
-    <iframe class="dimostrazione_1a" src=""></iframe>
-    <iframe class="dimostrazione_1b" src=""></iframe>
-
+    <iframe scrolling=no frameborder=no  width=700 height=700 class="dimostrazione_1a" src="/assets/js/dado_reale/index_reale.html"></iframe>
+    <iframe scrolling=no frameborder=no width=700 height=700 class="dimostrazione_1b" src="/assets/js/dado_simulazione/index.html"></iframe>
 </div>  <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
+
 
 
 
@@ -117,18 +116,15 @@
 
 <hr class="hr_filetto">
 
-<h1 class="titolo_sezioni">Middle-square method</h1> 
-
+<h1 id="middle_square_method" class="titolo_sezioni">Middle-square method</h1>
        <div class="cenni_storici_msm">
             <div class="container-main">  
             <h3 class="titolo01">Cenni storici</h3>
         <p class= "testo01">I primi passi nella generazione di numeri pseudo-casuali risalgono al  XVII secolo con Blaise Pascal e Pierre de Fermat, che esplorarono l'idea  tramite esperimenti di gioco d'azzardo. L'elaborazione degli algoritmi  avvenne solo nel XX secolo. La necessità di numeri casuali è antica, con  metodi empirici come il lancio dei dadi. Con l'avanzare della  tecnologia, la generazione sistematica di numeri casuali divenne  essenziale. Nei computer deterministici, ottenere casualità è  impossibile, ma si è proposto l'uso di fenomeni non deterministici, come  i rumori del suono a bassa frequenza.
             Un momento significativo nella storia della generazione di numeri pseudo-casuali è rappresentato dalla collaborazione di John von Neumann alla costruzione della bomba all'idrogeno nel 1949. Von Neumann calcolò approssimazioni ai processi della fissione nucleare, che richiedevano l'accesso a numeri casuali riproducibili per risultati coerenti e ripetibili. Per soddisfare questa esigenza, von Neumann sviluppò il Middle Square Method, uno dei primi algoritmi documentati per la generazione di numeri pseudo-casuali.</p>
             <img src="/assets/image/von_neumann.jpg" alt="immagine schema 01" style="width: 100%; height: auto;" class="immagine_von">
-        </div>  <!-- chiusura primo paragrafo-->
+        </div>  <!-- chiusura  paragrafo-->
  </div> <!-- chiusura main cont-->
-
-
 
  <div class="funzionamento_msm">
     <div class="container-main"> 
@@ -138,8 +134,6 @@
 </div>  <!-- chiusura primo paragrafo-->
 </div> <!-- chiusura main cont-->
 
-
-
 <div class="limiti_msm">
     <div class="container-main">  
     <h3 class="titolo01">Limiti dell'MSM</h3>
@@ -147,12 +141,53 @@
 </div>  <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
 
+
+
+
+<hr class="hr_filetto">
+<h1 id="linear_congruential" class="titolo_sezioni">Linear Congruential Generator</h1>
+<div class="cenni_storici_msm">
+    <div class="container-main">  
+    <h3 class="titolo01">Cenni storici</h3>
+<p class= "testo01">Il Generatore Lineare Congruenziale (LCG) è stato proposto da Derrick Henry Lehmer nel 1951. Lehmer, un matematico americano, sviluppò questo metodo come un'alternativa efficiente per la generazione di numeri pseudo-casuali. L’LCG è stato ampiamente utilizzato in varie applicazioni, come simulazioni informatiche, crittografia e modellazione statistica. La sua semplicità e la relativa facilità di implementazione lo hanno reso una scelta popolare per generare sequenze di numeri che, sebbene non siano veramente casuali, soddisfano spesso i requisiti di casualità richiesti in molte applicazioni pratiche.</p>
+    <img src="/assets/image/Lehmer.png" alt="immagine_Lehmer" style="width: 100%; height: auto;" class="immagine_von">
+</div>  <!-- chiusura primo paragrafo-->
+</div> <!-- chiusura main cont-->
+
+
+<div class="funzionamento_lcg">
+    <div class="container-main"> 
+    <h3 class="titolo_funzionamento_msm">Funzionamento</h3>
+<p class= "testo_funzionamento_msm">Il Generatore Congruenziale Lineare (LCG) si basa su una semplice equazione lineare ricorsiva:</p>
+<div class="formula_lcg">X<span class="subscript">1</span> = (aX<span class="subscript">n</span> + c) mod m
+  </div>
+  <p class= "testo_funzionamento_msm"><br>L’equazione coinvolge quattro parametri fondamentali:
+    Modulo (m): è il valore con cui viene preso il resto della divisione; m determina anche il periodo dell'LCG, cioè quante iterazioni può fare prima di iniziare a ripetersi.
+    Moltiplicatore (a): è un fattore di moltiplicazione, un valore intero positivo maggiore di zero e minore di m.
+    Incremento (c): è un numero intero non negativo e minore di m. È un incremento, aggiunto dopo la moltiplicazione.
+    Seme iniziale (x0): è il seme iniziale con cui l'LCG inizia a generare numeri pseudo-casuali. Deve essere un numero compreso tra 0 e m-1.
+    L'equazione dell'LCG moltiplica il seme per il moltiplicatore a, aggiunge l'incremento c, e poi calcola il resto della divisione per il valore m. In questo contesto, Xn rappresenta il numero pseudo-casuale all'iterazione n, mentre Xn+1 indica il numero pseudo-casuale all'iterazione successiva dopo n.
+    La qualità della sequenza generata dipende strettamente dalla scelta dei valori per il moltiplicatore a, l'incremento c e il modulo m. Questi parametri influenzano la distribuzione dei numeri generati, la lunghezza del periodo della sequenza e la casualità della sequenza stessa. Pertanto, la scelta accurata di questi parametri è fondamentale per garantire che la sequenza generata sia casualmente distribuita e abbia un periodo lungo prima di ripetersi.</p>
+    <img src="/assets/image/funzionamento_lcg.svg" alt="immagine schema 01" style="width: 100%; height: auto; stroke: 2px;" class="immagine_lcg">
+</div>  <!-- chiusura primo paragrafo-->
+</div> <!-- chiusura main cont-->
+<h3 class="titolo_funzionamento_msm"> Dimostrazione scelta dei parametri </h3>
+
+
 <hr class="hr_filetto">
 
-<h1 class="titolo_sezioni">Linear Congruential Generator</h1> 
+<div class="footer">
+    <div class="container-main">  
+    <p class= "fonti" >Fonti: xxx: link <br> xxx: link <br> xxx: link <br> xxx: link <br> xxx: link <br></p>
+    <p class= "autore" >Roberta Valli<br>CV2 SUPSI<br>A.A 2023/2024</p>
+    <p class= "prof" >Docenti:<br>Andreas Gysin<br>Giovanni Profeta<br></p>
+    <p class= "corso" >Interaction Design<br>Esercizio intermedio<br>Pseudo Random</p>
 
+</div>  <!-- chiusura primo paragrafo-->
+</div> <!-- chiusura main cont-->
 
 
 </div> <!-- chiusura wrapper -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>

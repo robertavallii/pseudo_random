@@ -51,11 +51,15 @@ font-size: 30px;
 
 }
 
-p{
+.testo01, .testo02, .testo_funzionamento_msm, .testo_limiti {
   line-height: 25px; /* 125% */
   font-size: 18px;
   font-weight: 300;
   margin-top: 0px;
+}
+
+p{
+
 }
 
 .container {
@@ -129,8 +133,6 @@ grid-column-end: 4; /* Termina alla terza colonna */
   grid-column-start: 1; /* Inizia dalla prima colonna */
   grid-column-end: 7; /* Termina alla terza colonna */
   margin-top: 100px; /* Riduci il margine superiore */
-
-
 }
 
 .secondoparagrafo{
@@ -207,20 +209,18 @@ grid-column-end: 4; /* Termina alla terza colonna */
   margin: 20px 0; /* Margine sopra e sotto */
   margin-top: 200px;
 }
-.dimostrazione_1a {
-  width: 650px;
-  height: 650px;
-  background-color: #0029FF;
+
+.dado_reale{
   grid-column-start: 1;
   grid-column-end: 4;
 }
-.dimostrazione_1b {
-  width: 650px;
-  height: 650px;
-  background-color: #0029FF;
+
+.dado_simulazione{
   grid-column-start: 4;
   grid-column-end: 7;
+
 }
+
 .cenni_storici_msm{
 margin-bottom: 100px;
 }
@@ -258,21 +258,36 @@ margin-bottom: 100px;
 }
 
 
-/*MEDIA QUERES NAVBAR*/
-@media screen and (max-width: 767px) {
-  .container-main {
-    grid-template-columns: 1fr; /* Modifica la griglia a una singola colonna */
-  }
+.formula_lcg {
+  font-family: 'Times New Roman', Times, serif;
+  grid-column-start: 1;
+  grid-column-end: 4; 
+  text-align: center;
+  font-size: 18px; /* Dimensione del testo della formula */
+}
 
-  /* Aggiusta il posizionamento dei titoli e dei paragrafi all'interno della griglia */
-  .h3, .titolo01, .testo_requisiti, .titolo02, .testo02, .testo_funzionamento_msm{
-    grid-column: 1 / -1; /* Estende i titoli e i paragrafi su tutte le colonne disponibili */
-  }
+.formula_lcg .subscript {
+  font-size: 10px; /* Dimensione del testo del sottoscript */
+  vertical-align: sub; /* Allinea il sottoscript in basso rispetto alla linea di base */
+  font-weight: 400;
+}
 
-  /* Aggiusta il posizionamento dei rettangoli e delle didascalie */
-  .rettangolo, .rettangolo2, .rettangolo3,
-  .didascalia, .didascalia2, .didascalia3 {
-    grid-column-start: 1; /* Inizia dalla prima colonna */
-    grid-column-end: -1; /* Termina all'ultima colonna disponibile */
-  }
+.immagine_lcg{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  margin-top: 100px; 
+  margin-bottom: 100px;
+}
+
+.dimostrazione_1a{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+.dimostrazione_1b{
+  grid-column-start: 4;
+  grid-column-end: 7;
+  margin-top: -8px;
+  margin-left: -8px;
 }
