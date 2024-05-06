@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-66b2981b-2fe1-47a0-bb8a-fc78955ced22" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1359.1 80">
+  <defs>
+    <style>
+      .uuid-1eab403a-7d45-4a19-b1cd-f6de2b4e42d7 {
+        fill: #1d1d1b;
+        font-family: AkzidenzGroteskBE-Regular, 'Berthold Akzidenz Grotesk';
+        font-size: 20px;
+        letter-spacing: .01em;
+      }
+
+      .uuid-bbae5706-cd5a-4ceb-b2c6-c33b629c7d43, .uuid-30a93191-d515-4f44-b612-5a2b74cdae67 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .uuid-30a93191-d515-4f44-b612-5a2b74cdae67 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <rect class="uuid-30a93191-d515-4f44-b612-5a2b74cdae67" x="1040.01" y=".5" width="318.59" height="79"/>
+  <text class="uuid-1eab403a-7d45-4a19-b1cd-f6de2b4e42d7" transform="translate(1061.1 47.07)"><tspan x="0" y="0">Stringa di valori pseudo random</tspan></text>
+  <rect class="uuid-30a93191-d515-4f44-b612-5a2b74cdae67" x="520.26" y=".5" width="318.59" height="79"/>
+  <text class="uuid-1eab403a-7d45-4a19-b1cd-f6de2b4e42d7" transform="translate(574.11 47.07)"><tspan x="0" y="0">Algoritmo deterministico</tspan></text>
+  <rect class="uuid-30a93191-d515-4f44-b612-5a2b74cdae67" x=".5" y=".5" width="318.59" height="79"/>
+  <text class="uuid-1eab403a-7d45-4a19-b1cd-f6de2b4e42d7" transform="translate(134.69 47.07)"><tspan x="0" y="0">Seme</tspan></text>
+  <path class="uuid-bbae5706-cd5a-4ceb-b2c6-c33b629c7d43" d="M342.4,40h154.53"/>
+  <path class="uuid-bbae5706-cd5a-4ceb-b2c6-c33b629c7d43" d="M476.65,61.25l20.28-21.25-20.28-21.25"/>
+  <path class="uuid-bbae5706-cd5a-4ceb-b2c6-c33b629c7d43" d="M862.16,40h154.53"/>
+  <path class="uuid-bbae5706-cd5a-4ceb-b2c6-c33b629c7d43" d="M996.41,61.25l20.28-21.25-20.28-21.25"/>
+</svg>

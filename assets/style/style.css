@@ -9,6 +9,9 @@ a {
   font-weight: 400;
 }
 
+
+
+
 li{
 font-size: 18px;
 
@@ -21,7 +24,7 @@ font-size: 18px;
 }
 
 h1 {
-  margin-top: 100px;
+
   font-size: 75px;
   color: #0029FF;
   font-weight: 800;
@@ -55,12 +58,9 @@ font-size: 30px;
   line-height: 25px; /* 125% */
   font-size: 18px;
   font-weight: 300;
-  margin-top: 0px;
 }
 
-p{
 
-}
 
 .container {
   background-color: var(--nav-color);
@@ -75,6 +75,7 @@ p{
   height: 80px;
   width: 100%;
   margin: auto;
+  
 }
 
 .navbar ul {
@@ -94,23 +95,16 @@ p{
   margin: 0 10px;
 }
 
-.navbar a {
-  color: var(--nav-text);
-  font-weight: lighter;
-}
 
-.navbar a:hover {
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-
-.container-main {
+.container-main, .container-main-ambiti {
   grid-template-columns: repeat(6, 1fr);
   column-gap: 60px;
   display: grid;
 }
 
-
+.container-main-ambiti{
+  margin-top: -100px;
+}
 .h3 {
   font-weight: 600;
   font-size: 35px;
@@ -128,24 +122,38 @@ grid-column-start: 1; /* Inizia dalla prima colonna */
 grid-column-end: 4; /* Termina alla terza colonna */
 
 }
-
-.titolo01, .titolo03{
-  grid-column-start: 1; /* Inizia dalla prima colonna */
-  grid-column-end: 7; /* Termina alla terza colonna */
+.titolo03_dimostrazione{
+  grid-column-start: 1; 
+  grid-column-end: 7; 
   margin-top: 100px; /* Riduci il margine superiore */
 }
+.titolo01, .titolo03,.titolo02,.titolo_ambiti, .titolo_limiti  {
+  grid-column-start: 1; 
+  grid-column-end: 7; 
+  margin-top: 100px; /* Riduci il margine superiore */
+}
+.titolo02_ambiti{
+  margin-top: -200px;
+}
+.titolo03_dimostrazione{
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
 
+.titolo_limiti{
+  margin-top: 0px;
+}
 .secondoparagrafo{
   margin-top: 100px;
 }
 .testo02{
-  grid-column-start: 1; /* Inizia dalla prima colonna */
-  grid-column-end: 4; /* Termina alla terza colonna */
+  grid-column-start: 1;
+  grid-column-end: 4; 
 
   }
-  .titolo02{
-    grid-column-start: 1; /* Inizia dalla prima colonna */
-    grid-column-end: 7; /* Termina alla terza colonna */
+  .titolo02, .titolo_ambiti{
+    grid-column-start: 1; 
+    grid-column-end: 7; 
 
   }
  
@@ -165,7 +173,7 @@ grid-column-end: 4; /* Termina alla terza colonna */
   }
   
 .rettangolo, .rettangolo2, .rettangolo3 {
-  margin-top: 140px;
+  margin-top: 50px;
     margin-bottom: 20px;
     height: 79px;
     display: flex;
@@ -185,7 +193,7 @@ grid-column-end: 4; /* Termina alla terza colonna */
     grid-column-start: 5;
     grid-column-end: 7;
 }
-.rettangolo p, .rettangolo2 p, .rettangolo3 p { /* testo all'interno del quadrato */
+.rettangolo p, .rettangolo2 p, .rettangolo3, p { /* testo dentro  quadrato */
     color: rgb(0, 0, 0);
     font-weight: regular;
 }
@@ -193,41 +201,40 @@ grid-column-end: 4; /* Termina alla terza colonna */
 .didascalia span,
 .didascalia2 span,
 .didascalia3 span {
-  color: rgb(0, 0, 0); /* Colore del testo */
-  margin-top: 10px; /* Margine superiore */
+  color: rgb(0, 0, 0); 
+  margin-top: 10px; 
   margin-bottom: 100px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  display: block; /* Imposta il display come blocco */
-
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 300;
+  font-style: italic;
 }
 
+.didascalia_dado_reale, .didascalia_dado_simulato{
+  color: rgb(0, 0, 0); 
+  margin-top: 10px; 
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  font-style: italic;
+}
 .hr_filetto {
   border: none;
-  border-top: 1px solid rgba(148, 148, 148, 0.60); /* Stile della linea orizzontale */
-  margin: 20px 0; /* Margine sopra e sotto */
-  margin-top: 200px;
+  border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
+margin-top: 200px;
+margin-bottom: 200px;
+
 }
 
-.dado_reale{
-  grid-column-start: 1;
-  grid-column-end: 4;
+.hr_filetto_footer{
+  margin-top: 100px;
+
 }
 
-.dado_simulazione{
+.immagine_von {
   grid-column-start: 4;
   grid-column-end: 7;
-
-}
-
-.cenni_storici_msm{
-margin-bottom: 100px;
-}
-
-.immagine_von{
-  grid-column-start: 4;
-  grid-column-end: 7;
+  margin-bottom: 100px;
 }
 
 .immagine_msm{
@@ -267,8 +274,8 @@ margin-bottom: 100px;
 }
 
 .formula_lcg .subscript {
-  font-size: 10px; /* Dimensione del testo del sottoscript */
-  vertical-align: sub; /* Allinea il sottoscript in basso rispetto alla linea di base */
+  font-size: 10px; /* dimensione testo subscriptin */
+  vertical-align: sub; /* allinea il subscriptin  alla linea di base */
   font-weight: 400;
 }
 
@@ -276,7 +283,7 @@ margin-bottom: 100px;
   grid-column-start: 1;
   grid-column-end: 7;
   margin-top: 100px; 
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .dimostrazione_1a{
@@ -284,10 +291,260 @@ margin-bottom: 100px;
   grid-column-end: 4;
   margin-top: -8px;
   margin-left: -8px;
+ 
 }
 .dimostrazione_1b{
   grid-column-start: 4;
   grid-column-end: 7;
   margin-top: -8px;
   margin-left: -8px;
+}
+
+.footer{
+  font-family: 'AkzidenzGrotesk', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.fonti{
+  font-family: 'AkzidenzGrotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  grid-column-start: 1; 
+  grid-column-end: 3; 
+}
+
+.autore{
+grid-column: 4;
+}
+
+.corso{
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.prof{
+  grid-column: 6;
+}
+
+
+.sezioni_nav:hover {
+  color: #0029FF;
+  transition: color 0,1s ease-in-out, ease-in-out
+}
+
+.sezioni_nav:active {
+  color:#001caa; /* clic */
+  transition: color 3s ease-in-out, ease-in-out;
+}
+
+.sezioni_nav {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 300;
+  transition: color 0.3s ease; /* Aggiungi una transizione di colore */
+
+}
+
+.index{
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.index:hover{
+  color: #0029FF;
+  transition: color 0,1s ease-in-out, ease-in-out
+}
+
+hr{
+  border: none;
+  border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
+}
+
+.didascalia_dado_simulato{
+  grid-column-start: 4;
+  grid-column-end: 7;
+  margin-top: -120px;
+  grid-row: 3;
+}
+
+.didascalia_dado_reale{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: -120px;
+  grid-row: 3;
+}
+
+.hr_filetto_sopra_footer {
+  border: none;
+  border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+.hr_filetto_footer{ /* ultimo filetto */
+  border: none;
+  border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
+  margin-top: 50px;
+}
+
+/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
+
+@media only screen and (max-width: 700px) {
+	body {
+		background-color: rgb(255, 182, 231);
+	}
+  .wrapper {
+    max-width: 92vw;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin: 0 auto;
+  }
+  
+  .container-main, .container-main-ambiti {
+    grid-template-columns: repeat(1, 1fr); /* Imposta una singola colonna */
+    column-gap: 0; /* Rimuovi lo spazio tra le colonne */
+  }
+
+
+p{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.dimostrazione_1a{
+  grid-column-start: 1;
+  margin-top: 20px;
+  margin-left: -8px;
+ 
+}
+.dimostrazione_1b{
+  grid-column-start: 1;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.immagine01, .immagine_msm, .immagine_von {
+grid-template-columns: 1;
+}
+
+.wrapper {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin: 0 auto; /* Utilizza solo i margini per centrare il contenuto */
+}
+
+h1, h2, h3{
+grid-column-start: 1;
+}
+
+.cenni_storici_msm{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+
+.didascalia_dado_simulato{
+  
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+
+.didascalia_dado_reale{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  margin-top: -120px;
+  font-weight: 300;
+  font-style: italic;
+}
+.middle_square_method, .funzionamento_msm 
+{
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+.immagine_lcg, .immagine_msm, .immagine_von{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+
+.gruppo {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.gruppo2 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.gruppo3 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.dimostrazione_1a, .dimostrazione_1b{
+  width: 400px;
+  height: 400px;
+
+}
+.dimostrazione_1b{
+  grid-row: 3;
+}
+
+.dimostrazione_1b{
+  grid-row: 1;
+}
+.dimostrazione_1a{
+  grid-row: 3;
+
+}
+.dimostrazione1{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+h1, .titolo_header {
+font-size: 50px;
+}
+
+h2{
+  font-size: 35px;
+  }
+h3{
+  font-size: 20px;
+  }
+p{
+  font-size: 16px;
+}
+
+.testo01, .testo02, .testo03, .testo_funzionamento_msm, .testo_limiti, .formula_lcg{
+  font-size: 16px;
+}
+.autore, .corso, .prof, .fonti{
+  font-family: 'AkzidenzGrotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.fonti{
+  grid-column-start: 1; 
+  grid-column-end: 1; 
+}
+
+.autore{
+grid-column: 1;
+
+}
+
+.corso{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.prof{
+  grid-column: 1;
+}
+
 }

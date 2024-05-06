@@ -25,27 +25,28 @@
 
             <div class="container">
                 <div class="navbar">
-                  <li>Index</li>
+                    <li class="index">Index</li>
                     <nav>
                       <ul>
-                        <li><a href="#pseudo_random">Pseudo Random</a></li>
-                        <li><a href="#middle_square_method">Middle Square Method</a></li>
-                        <li><a href="#linear_congruential">Linear congruential generator</a></li>
+                        <li><a class="sezioni_nav" href="#pseudo_random">Pseudo Random</a></li>
+                        <li><a class="sezioni_nav" href="#middle_square_method">Middle Square Method</a></li>
+                        <li><a class="sezioni_nav" href="#linear_congruential">Linear congruential generator</a></li>
                       </ul>
                     </nav>
                 </div>
               </div> 
-
         <hr>
-        <h1 id="pseudo_random" class="titolo_header">Algoritmi Pseudo Random</h1>
-        <h2>Un sistema di numeri pseudo-casuali è un metodo per generare una sequenza di numeri che appaiono casuali, ma che sono in realtà determinati da un algoritmo predefinito.
-        </h2> 
+        
+
+
+       <h1 id="pseudo_random" class="titolo_header">Algoritmi Pseudo Random</h1>
+        <h2>Un algoritmo pseudocasuale genera numeri che sembrano casuali, ma che in realtà sono il risultato di un sistema deterministico.</h2> 
         <h3></h3>
-        <img src="/assets/image/schema01.svg" alt="immagine schema 01" style="width: 100%; height: auto;" class="immagine01">
+        <img src="/assets/image/schema_01_b.png" alt="immagine schema 01" style="width: 100%; height: auto;" class="immagine01">
 
         <div class="requisiti">
             <div class="container-main">  
-            <h3 class="titolo01">Requisiti di una sequenza casuale</h3>
+            <h3 class="titolo01">Requisiti per sequenze casuali</h3>
         <p class= "testo01">Una sequenza è considerata casuale se rispetta due requisiti essenziali: distribuzione uniforme e indipendenza. La distribuzione uniforme implica che i numeri all'interno di un intervallo siano equamente distribuiti, mentre l'indipendenza richiede che ciascun numero non sia influenzato dai precedenti. Inoltre, è importante che il periodo della sequenza sia ampio, in modo da evitare che i numeri casuali in una simulazione si ripetano ciclicamente.</p>
     </div>  <!-- chiusura primo paragrafo-->
  </div> <!-- chiusura main cont-->
@@ -62,7 +63,7 @@
         </div>
         <!-- Didascalia 1 -->
         <div class="didascalia">
-            <span>Esempio di sequenza errata, non soddisfa entrambi i requisiti</span>
+            <span>Esempio di sequenza errata, non soddisfa nessuno dei requisiti.</span>
         </div>
     </div>
 
@@ -74,7 +75,7 @@
         </div>
         <!-- Didascalia 2 -->
         <div class="didascalia2">
-            <span>Esempio di sequenza errata, soddisfa solo il criterio di equidistanza</span>
+            <span>Esempio di sequenza errata, soddisfa il criterio di equidistanza ma non il criterio di indipendenza (definizione intuitiva dei PRNG)</span>
         </div>
     </div>
     
@@ -96,10 +97,12 @@
 
 <div class="dimostrazione1">
     <div class="container-main">  
-    <h3 class="titolo03">Dimostrazione differenza tra realtà e casualità</h3>
+    <h3 class="titolo03_dimostrazione">Dimostrazione differenze tra dati reali e PRNG</h3>
     <iframe scrolling=no frameborder=no  width=700 height=700 class="dimostrazione_1a" src="/assets/js/dado_reale/index_reale.html"></iframe>
+    <span class="didascalia_dado_reale"> Dado fisico: visualizzazione grafica dei risultati di 484 tiri di un dado reale.    </span>
     <iframe scrolling=no frameborder=no width=700 height=700 class="dimostrazione_1b" src="/assets/js/dado_simulazione/index.html"></iframe>
-</div>  <!-- chiusura secondo paragrafo-->
+    <span class="didascalia_dado_simulato">Dado simulato: visualizzazione grafica dei risultati di 484 tiri di dado simulati <br> utilizzando funzione di generazione pseudocasuale.</span>
+    <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
 
 
@@ -107,8 +110,8 @@
 
 <!-- secondo paragrafo-->
 <div class="secondoparagrafo">
-    <div class="container-main">  
-    <h3 class="titolo02">Ambiti di utilizzo</h3>
+    <div class="container-main-ambiti">  
+    <h3 class="titolo_ambiti">Ambiti di utilizzo</h3>
 <p class= "testo02">I numeri casuali e pseudo-casuali, sono ampiamente utilizzati in vari ambiti, quali la simulazione di fenomeni naturali, l'analisi numerica, la programmazione informatica, i videogiochi, il creative coding e la crittografia. Questo approccio trova applicazioni in molteplici settori della scienza e della tecnologia. Tra questi vi sono la crittografia (per la generazione di chiavi e password), la simulazione tramite computers, il metodo MonteCarlo per il calcolo numerico (utile, ad esempio, nel calcolo di integrali complessi non trattabili con metodi classici), i giochi d’azzardo online (come dadi, carte, roulette e casinò online), gli algoritmi probabilistici (come l’algoritmo di Miller-Rabin per la verifica della primalità di un numero) e la programmazione dei videogiochi. </p>
 </div>  <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
@@ -136,7 +139,7 @@
 
 <div class="limiti_msm">
     <div class="container-main">  
-    <h3 class="titolo01">Limiti dell'MSM</h3>
+    <h3 class="titolo_limiti">Limiti dell'MSM</h3>
 <p class= "testo_limiti">Il Middle Square Method presenta limiti significativi che ne minano l'efficacia e l'affidabilità. La sua tendenza a generare cicli di ripetizione brevi compromette la casualità dei numeri prodotti, rendendolo inadatto per applicazioni che richiedono alta casualità e bassa correlazione tra i numeri. È sensibile alla scelta del seme iniziale e può generare risultati imprevedibili se il seme non è selezionato correttamente.         Inoltre, può produrre sequenze con una distribuzione non uniforme, sovrarappresentando alcuni numeri rispetto ad altri. Questi limiti lo rendono meno adatto per applicazioni che richiedono una generazione casuale di alta qualità, spingendo verso l'adozione di algoritmi più sofisticati.</p>
 </div>  <!-- chiusura secondo paragrafo-->
 </div> <!-- chiusura main cont-->
@@ -161,30 +164,51 @@
 <p class= "testo_funzionamento_msm">Il Generatore Congruenziale Lineare (LCG) si basa su una semplice equazione lineare ricorsiva:</p>
 <div class="formula_lcg">X<span class="subscript">1</span> = (aX<span class="subscript">n</span> + c) mod m
   </div>
-  <p class= "testo_funzionamento_msm"><br>L’equazione coinvolge quattro parametri fondamentali:
-    Modulo (m): è il valore con cui viene preso il resto della divisione; m determina anche il periodo dell'LCG, cioè quante iterazioni può fare prima di iniziare a ripetersi.
-    Moltiplicatore (a): è un fattore di moltiplicazione, un valore intero positivo maggiore di zero e minore di m.
-    Incremento (c): è un numero intero non negativo e minore di m. È un incremento, aggiunto dopo la moltiplicazione.
-    Seme iniziale (x0): è il seme iniziale con cui l'LCG inizia a generare numeri pseudo-casuali. Deve essere un numero compreso tra 0 e m-1.
+  <p class= "testo_funzionamento_msm"><br>L’equazione coinvolge quattro parametri fondamentali: <br>
+    - Seme iniziale (Xn): è il seme iniziale con cui l'LCG inizia a generare numeri pseudo-casuali. Deve essere un numero compreso tra 0 e m-1. <br> 
+    - Modulo (m): è il valore con cui viene preso il resto della divisione; m determina anche il periodo dell'LCG, cioè quante iterazioni può fare prima di iniziare a ripetersi. <br>
+    - Moltiplicatore (a): è un fattore di moltiplicazione, un valore intero positivo maggiore di zero e minore di m. <br>
+    - Incremento (c): è un numero intero non negativo e minore di m. È un incremento, aggiunto dopo la moltiplicazione. <br> 
+     <br> 
     L'equazione dell'LCG moltiplica il seme per il moltiplicatore a, aggiunge l'incremento c, e poi calcola il resto della divisione per il valore m. In questo contesto, Xn rappresenta il numero pseudo-casuale all'iterazione n, mentre Xn+1 indica il numero pseudo-casuale all'iterazione successiva dopo n.
     La qualità della sequenza generata dipende strettamente dalla scelta dei valori per il moltiplicatore a, l'incremento c e il modulo m. Questi parametri influenzano la distribuzione dei numeri generati, la lunghezza del periodo della sequenza e la casualità della sequenza stessa. Pertanto, la scelta accurata di questi parametri è fondamentale per garantire che la sequenza generata sia casualmente distribuita e abbia un periodo lungo prima di ripetersi.</p>
     <img src="/assets/image/funzionamento_lcg.svg" alt="immagine schema 01" style="width: 100%; height: auto; stroke: 2px;" class="immagine_lcg">
 </div>  <!-- chiusura primo paragrafo-->
 </div> <!-- chiusura main cont-->
-<h3 class="titolo_funzionamento_msm"> Dimostrazione scelta dei parametri </h3>
+<!--  <h3 class="titolo_funzionamento_msm"> Dimostrazione scelta dei parametri </h3>  -->
 
 
-<hr class="hr_filetto">
+<hr class="hr_filetto_sopra_footer">
 
 <div class="footer">
     <div class="container-main">  
-    <p class= "fonti" >Fonti: xxx: link <br> xxx: link <br> xxx: link <br> xxx: link <br> xxx: link <br></p>
-    <p class= "autore" >Roberta Valli<br>CV2 SUPSI<br>A.A 2023/2024</p>
-    <p class= "prof" >Docenti:<br>Andreas Gysin<br>Giovanni Profeta<br></p>
-    <p class= "corso" >Interaction Design<br>Esercizio intermedio<br>Pseudo Random</p>
-
-</div>  <!-- chiusura primo paragrafo-->
-</div> <!-- chiusura main cont-->
+        <p class="fonti">
+            Wikipedia - Generatore di numeri pseudocasuali<br>
+            Wikipedia - Numeri pseudocasuali<br>
+            GeeksforGeeks - Generatore di numeri pseudocasuali<br>
+            Khan Academy - Video numeri casuali vs generatore di numeri pseudocasuali<br>
+            Wikipedia - Generatore congruente lineare<br>
+            Lecture on RNG <br>
+            Columbia University - Generatore congruente lineare<br>
+        </p>
+        <p class="autore">
+            Roberta Valli<br>
+            CV2 SUPSI<br>
+            A.A 2023/2024
+        </p>
+        <p class="prof">
+            Docenti:<br>
+            Andreas Gysin<br>
+            Giovanni Profeta
+        </p>
+        <p class="corso">
+            Interaction Design<br>
+            Esercizio intermedio<br>
+            Pseudo Random
+        </p>
+    </div>
+</div>
+<hr class="hr_filetto_footer">
 
 
 </div> <!-- chiusura wrapper -->
