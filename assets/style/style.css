@@ -10,8 +10,6 @@ a {
 }
 
 
-
-
 li{
 font-size: 18px;
 
@@ -118,8 +116,8 @@ margin-bottom: 50px;
 }
 
 .testo01{
-grid-column-start: 1; /* Inizia dalla prima colonna */
-grid-column-end: 4; /* Termina alla terza colonna */
+grid-column-start: 4; /* Inizia dalla prima colonna */
+grid-column-end: 7; /* Termina alla terza colonna */
 
 }
 .titolo03_dimostrazione{
@@ -127,7 +125,16 @@ grid-column-end: 4; /* Termina alla terza colonna */
   grid-column-end: 7; 
   margin-top: 100px; /* Riduci il margine superiore */
 }
-.titolo01, .titolo03,.titolo02,.titolo_ambiti, .titolo_limiti  {
+
+
+.titolo01{
+  grid-column-start: 4; 
+  grid-column-end: 7; 
+  margin-top: 100px; /* Riduci il margine superiore */ 
+}
+
+
+ .titolo03,.titolo02,.titolo_ambiti, .titolo_limiti  {
   grid-column-start: 1; 
   grid-column-end: 7; 
   margin-top: 100px; /* Riduci il margine superiore */
@@ -221,8 +228,8 @@ grid-column-end: 4; /* Termina alla terza colonna */
 .hr_filetto {
   border: none;
   border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
-margin-top: 200px;
-margin-bottom: 200px;
+margin-top: 100px;
+margin-bottom: 100px;
 
 }
 
@@ -233,7 +240,8 @@ margin-bottom: 200px;
 
 .immagine_von {
   grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-end: 5;
+  margin-top: 30px;
   margin-bottom: 100px;
 }
 
@@ -258,6 +266,7 @@ margin-bottom: 200px;
 .titolo_funzionamento_msm{
   grid-column-start: 1;
   grid-column-end: 4;
+  margin-top: 200px;
 }
 .testo_funzionamento_msm{
   grid-column-start: 1;
@@ -389,6 +398,75 @@ hr{
   border-top: 1px solid rgba(148, 148, 148, 0.60); /* linea filetto */
   margin-top: 50px;
 }
+
+
+  .nome_generatore, .titolo_nome_generatore {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 1;
+  margin: 0px;
+  margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.anni_sviluppo, .titolo_anni_sviluppo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1;
+  margin: 0px;
+  margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.formula, .titolo_formula {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row: 1;
+  margin: 0px;
+  margin-top: 25px;
+margin-bottom: 25px;
+}
+.descrizione, .titolo_descrizione {
+  grid-column-start: 4; /* Inizia dalla quinta colonna */
+  grid-column-end: 7; /* Termina alla settima colonna */
+  grid-row: 1;
+  margin: 0px;
+  margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.titolo_nome_generatore, .titolo_anni_sviluppo, .titolo_formula, .titolo_descrizione {
+font-weight: bold;
+margin-top: 25px;
+margin-bottom: 25px;
+
+}
+
+.descrizione, .formula, .anni_sviluppo, .nome_generatore{
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 300;
+}
+
+.titolo_Altri_generatori{
+  margin-bottom: 100px;
+}
+
+
+
+.titolo_nome_generatore, .titolo_anni_sviluppo, .titolo_formula, .titolo_descrizione {
+  font-weight: 600;
+  font-size: 25px;
+
+}
+
+.container-main-footer{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
@@ -548,3 +626,4 @@ grid-column: 1;
 }
 
 }
+
