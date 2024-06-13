@@ -11,7 +11,6 @@ Autore: Roberta Valli
 
 ## Introduzione e tema
 La pagina web è dedicata a illustrare sia la storia evolutiva dell'algoritmo di generazione pseudocasuale di numeri sia il suo funzionamento tecnico. L'obiettivo principale è fornire una panoramica comprensibile dei concetti teorici e pratici dietro gli algoritmi di generazione di numeri pseudocasuali, con particolare attenzione agli sviluppi storici.
-[<img src="./documentazione/valli-roberta_pseudo-random.mov" width="500" alt="Screencast progetto">]()
 
 
 
