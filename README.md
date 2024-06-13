@@ -10,46 +10,61 @@ Autore: Roberta Valli
 
 
 ## Introduzione e tema
-Pagina web per spiegare i venni storici dell'algoritmo e il funzionamento dell'algorimto pseudo random
+La pagina web è dedicata a illustrare sia la storia evolutiva dell'algoritmo di generazione pseudocasuale di numeri sia il suo funzionamento tecnico. L'obiettivo principale è fornire una panoramica comprensibile dei concetti teorici e pratici dietro gli algoritmi di generazione di numeri pseudocasuali, con particolare attenzione agli sviluppi storici.
+
 
 ## Riferimenti progettuali
-Per questo progetto non ho avuto riferimenti progettuali specifici, ma ad esempio per la simulazione dei dadi ho proseo ispirazione da un video 
+Per questo progetto, non ho seguito riferimenti progettuali specifici per la costruzione dell'interfaccia. Tuttavia, ho raccolto tutte le informazioni necessarie e i cenni storici da diverse fonti online, tra cui:
 
-https://user-images.githubusercontent.com/6561331/236182302-68a6bd12-7b83-4d19-b83e-c9b7db795881.mp4
+https://www.geeksforgeeks.org/pseudo-random-number-generator-prng/
+https://en.wikipedia.org/wiki/Pseudorandom_number_generator
+https://www.geeksforgeeks.org/generate-random-numbers-using-middle-square-method-in-java/
+https://www.educative.io/answers/pseudo-random-number-using-the-middle-square-method
 
 
 ## Design dell’interfraccia e modalià di interazione
-Facilisis magna etiam tempor orci eu. Felis donec et odio pellentesque diam volutpat commodo. Dis parturient montes nascetur ridiculus mus mauris vitae. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Accumsan sit amet nulla facilisi. Ultricies leo integer malesuada nunc vel risus. Est lorem ipsum dolor sit. Ultrices neque ornare aenean euismod elementum nisi. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Arcu dictum varius duis at consectetur lorem donec massa sapien. Pellentesque habitant morbi tristique senectus. Turpis massa sed elementum tempus egestas sed sed risus pretium. Eros donec ac odio tempor orci. Pellentesque id nibh tortor id aliquet lectus. Risus feugiat in ante metus dictum at. Quam pellentesque nec nam aliquam sem et tortor consequat id. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Sit amet dictum sit amet justo donec enim.
+Il sito web "Pseudo Random" presenta un'interfaccia pensata per offrire una comprensione chiara e strutturata dei concetti legati alla generazione di numeri pseudocasuali. Diviso in sezioni tematiche ben definite (funzionamento generale degli algoritmi, middle square method e altri tipi di generatori) il design del sito utilizza testi informativi e illustrazioni visive per comunicare efficacemente i principi fondamentali dietro agli algoritmi pseudocasuali.
+
+Ogni sezione è accessibile tramite un menu di ancoraggio, facilitando la navigazione diretta agli argomenti di interesse. Questo approccio permette agli utenti di esplorare in modo intuitivo i vari aspetti della generazione di numeri casuali, dalla teoria dei requisiti delle sequenze casuali all'implementazione pratica di algoritmi come il Middle Square Method e il Linear Congruential Generator.
+
+L'uso di immagini esplicative e diagrammi contribuisce a rendere i concetti complessi più accessibili, supportando la comprensione visiva e facilitando l'apprendimento degli utenti interessati a questo campo. Il design dell'interfaccia si concentra sulla chiarezza e sull'organizzazione delle informazioni, garantendo una navigazione fluida e una fruizione efficace del contenuto educativo proposto.
 
 [<img src="doc/cards.gif" width="500" alt="Magic trick">]()
 
 
 ## Tecnologia usata
-Nunc consequat interdum varius sit amet mattis vulputate. Vehicula ipsum a arcu cursus vitae congue. Odio ut sem nulla pharetra. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Quisque egestas diam in arcu cursus. Eget nulla facilisi etiam dignissim diam. Aenean sed adipiscing diam donec adipiscing tristique. Porttitor massa id neque aliquam. Sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Lacus sed turpis tincidunt id aliquet risus feugiat.
+La pagina è stata principalmente sviluppata utilizzando HTML e CSS. Per illustrare la differenza tra i numeri pseudocasuali generati da un algoritmo e i risultati di un dado reale, è stata realizzata una simulazione mediante l'algoritmo "Middle Square Method" implementato in JavaScript. Questo algoritmo genera una sequenza di numeri pseudocasuali compresi tra 1 e 6, replicando il comportamento di un dado fisico. Inizialmente, un seme viene elevato al quadrato e le cifre centrali determinano il prossimo numero nella sequenza. Questo processo si ripete aggiornando il seme ad ogni iterazione, garantendo che i numeri generati siano nel range desiderato attraverso normalizzazione e arrotondamento.
 
+Dopo aver generato la sequenza di numeri, essi sono stati convertiti in tonalità di grigio per creare una rappresentazione visiva dei tiri del dado. Ogni numero pseudocasuale è stato associato a una scala di grigi, dove i numeri più alti corrispondono a tonalità più scure e quelli più bassi a tonalità più chiare. Di seguito è riportato il codice JavaScript utilizzato per questa simulazione:
 
 ```JavaScript
-const image = new Image();
-image.onload = () => {
-	gl.bindTexture(gl.TEXTURE_2D, texture);
-	gl.texImage2D(
-		gl.TEXTURE_2D,
-		level,
-		internalFormat,
-		srcFormat,
-		srcType,
-		image
-	);
-	if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-		gl.generateMipmap(gl.TEXTURE_2D);
-	} else {
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-	}
-};
-image.src = url;
+let seed = 5; // Inizializzazione del seme
+let numTiri = 484; // Numero di tiri del dado da simulare
+let results = []; // 
+
+// Funzione per generare numeri pseudocasuali simili al dado
+function R() {
+    const x = (5 * seed + 1) % 16; // Calcolo del valore
+    seed = x; // Aggiornamento del seme
+    return x % 6 + 1; // restituisce un numero compreso tra 1 e 6
+}
+
+// Simulazione tiri del dado
+for (let i = 0; i < numTiri; i++) {
+    let risultato = R(); // Genera un numero pseudocasuale tra 1 e 6
+    results.push(risultato); // Memorizza il risultato nell'array results
+}
+
+// Mappatura dei risultati su una scala di grigi e rappresentazione visiva
+for (let i = 0; i < results.length; i++) {
+    let num = results[i];
+    let grayValue = map(num, 1, 6, 0, 255); // Mappatura del numero su una scala di grigi
+    fill(grayValue); // Applica il colore grigio
+    // Disegna un quadratino o un altro elemento visivo per rappresentare il risultato
+}
 ```
+[<img src="documentazione/valli-roberta_pseudo-random_01.png" width="500" alt="Magic trick">]()
+
 
 ## Target e contesto d’uso
-Per questo progetto il. target erano i miei compagni di classe, quindi persone con un minimo di competenza e di conoscenza nell'abito, ma che non avevano mai afforntato l'algoritmo spiegato
+Per questo progetto, il pubblico target erano i miei compagni di classe, persone con una certa competenza e familiarità nel campo, ma che non avevano mai affrontato l'algoritmo specifico spiegato. In generale, può essere utile a chiunque desideri scoprire il funzionamento di base degli algoritmi pseudocasuali e comprendere come vengano implementati per generare sequenze di numeri casuali.

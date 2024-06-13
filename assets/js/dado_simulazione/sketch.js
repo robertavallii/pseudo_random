@@ -1,6 +1,7 @@
 let seed = 5; // Inizializzazione del seme
 let dim = 25; // Dimensione dei quadratini
 
+
 function R() {
     const x = (5 * seed + 1) % 16; // Calcolo del valore
     seed = x; // Aggiornamento del seme
@@ -11,6 +12,7 @@ function setup() {
     createCanvas(550, 550);
     drawGrid();
 }
+
 
 function drawGrid() {
     // Posizione iniziale del quadratino
