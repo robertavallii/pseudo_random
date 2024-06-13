@@ -31,7 +31,6 @@ Ogni sezione è accessibile tramite un menu di ancoraggio, facilitando la naviga
 L'uso di immagini esplicative e diagrammi contribuisce a rendere i concetti complessi più accessibili, supportando la comprensione visiva e facilitando l'apprendimento degli utenti interessati a questo campo. Il design dell'interfaccia si concentra sulla chiarezza e sull'organizzazione delle informazioni, garantendo una navigazione fluida e una fruizione efficace del contenuto educativo proposto.
 
 [<img src="./documentazione/valli-roberta_pseudo-random_03.png" width="500" alt="Interfaccia">]()
-[<img src="./documentazione/valli-roberta_pseudo-random_02.png" width="500" alt="Interfaccia">]()
 
 
 ## Tecnologia usata
