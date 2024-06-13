@@ -6,11 +6,13 @@ Elaborato 1: XS
 
 # Titolo progetto
 Autore: Roberta Valli
-[Algoritmi pseuto random](https://ixd-supsi.github.io/2023/esempi/mp_hands/es6/1_landmarks)
+[Algoritmi pseuto random](https://robertavallii.github.io/pseudo_random/)
 
 
 ## Introduzione e tema
 La pagina web è dedicata a illustrare sia la storia evolutiva dell'algoritmo di generazione pseudocasuale di numeri sia il suo funzionamento tecnico. L'obiettivo principale è fornire una panoramica comprensibile dei concetti teorici e pratici dietro gli algoritmi di generazione di numeri pseudocasuali, con particolare attenzione agli sviluppi storici.
+[<img src="./documentazione/valli-roberta_pseudo-random.mov" width="500" alt="Screencast progetto">]()
+
 
 
 ## Riferimenti progettuali
@@ -29,7 +31,8 @@ Ogni sezione è accessibile tramite un menu di ancoraggio, facilitando la naviga
 
 L'uso di immagini esplicative e diagrammi contribuisce a rendere i concetti complessi più accessibili, supportando la comprensione visiva e facilitando l'apprendimento degli utenti interessati a questo campo. Il design dell'interfaccia si concentra sulla chiarezza e sull'organizzazione delle informazioni, garantendo una navigazione fluida e una fruizione efficace del contenuto educativo proposto.
 
-[<img src="./documentazione/valli-roberta_pseudo-random_01.png" width="500" alt="Magic trick">]()
+[<img src="./documentazione/valli-roberta_pseudo-random_03.png" width="500" alt="Interfaccia">]()
+[<img src="./documentazione/valli-roberta_pseudo-random_02.png" width="500" alt="Interfaccia">]()
 
 
 ## Tecnologia usata
@@ -63,7 +66,7 @@ for (let i = 0; i < results.length; i++) {
     // Disegna un quadratino o un altro elemento visivo per rappresentare il risultato
 }
 ```
-[<img src="documentazione/valli-roberta_pseudo-random_01.png" width="500" alt="Magic trick">]()
+[<img src="documentazione/valli-roberta_pseudo-random_01.png" width="500" alt="simulazione dadi">]()
 
 
 ## Target e contesto d’uso
